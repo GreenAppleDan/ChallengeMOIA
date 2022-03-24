@@ -1,0 +1,9 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+target 'ChallengeMOIA' do
+  use_frameworks!
+
+  pod 'Swinject', '~> 2.8.1'
+
+end
