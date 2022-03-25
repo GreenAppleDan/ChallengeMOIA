@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9294841127EE213400B3DD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9294841027EE213400B3DD9F /* Assets.xcassets */; };
 		9294841427EE219100B3DD9F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841327EE219100B3DD9F /* Color.swift */; };
+		9294841627EE2E1500B3DD9F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841527EE2E1500B3DD9F /* Image.swift */; };
 		92A6D7FC27ECDEDD00EB5476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6D7FB27ECDEDD00EB5476 /* AppDelegate.swift */; };
 		92A6D80827ECDEDE00EB5476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A6D80627ECDEDE00EB5476 /* LaunchScreen.storyboard */; };
 		92A6D81627ECEC3700EB5476 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6D81027ECEC3700EB5476 /* MapPresenter.swift */; };
@@ -26,6 +27,7 @@
 		340404D6B894E30DF92B875E /* Pods_ChallengeMOIA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMOIA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9294841027EE213400B3DD9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9294841327EE219100B3DD9F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9294841527EE2E1500B3DD9F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		92A6D7F827ECDEDD00EB5476 /* ChallengeMOIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeMOIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A6D7FB27ECDEDD00EB5476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A6D80727ECDEDE00EB5476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9294841327EE219100B3DD9F /* Color.swift */,
+				9294841527EE2E1500B3DD9F /* Image.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				92A6D81F27ECF07400EB5476 /* Container+Inject.swift in Sources */,
 				92A6D81927ECEC3700EB5476 /* MapModels.swift in Sources */,
 				92A6D81B27ECEC3700EB5476 /* MapInteractor.swift in Sources */,
+				9294841627EE2E1500B3DD9F /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
