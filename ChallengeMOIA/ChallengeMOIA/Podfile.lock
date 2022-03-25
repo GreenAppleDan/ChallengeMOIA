@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.9.1)
   - GoogleMaps (6.1.1):
     - GoogleMaps/Maps (= 6.1.1)
   - GoogleMaps/Base (6.1.1)
@@ -7,18 +8,21 @@ PODS:
   - Swinject (2.8.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.8)
   - GoogleMaps (= 6.1.1)
   - Swinject (~> 2.8.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - GoogleMaps
     - Swinject
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   GoogleMaps: 94e6e0851beece6678af9f508f4918b7a7c61722
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 464e38d25afb57c49f87a9f40f2d239fb9debc5b
+PODFILE CHECKSUM: 808af1a6caf4c8d53b4d6ea3ffa438ad3fac29d8
 
 COCOAPODS: 1.11.3
