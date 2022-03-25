@@ -5,5 +5,5 @@ target 'ChallengeMOIA' do
   use_frameworks!
 
   pod 'Swinject', '~> 2.8.1'
-
+  pod 'GoogleMaps', '6.1.1'
 end

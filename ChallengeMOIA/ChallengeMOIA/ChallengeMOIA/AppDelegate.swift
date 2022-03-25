@@ -7,6 +7,7 @@
 
 import UIKit
 import Swinject
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let container = Container()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setGoogleMapsApiKey()
         container.registerDependency()
         configureWindow()
         
         return true
+    }
+    
+    private func setGoogleMapsApiKey() {
+        let key = "API_KEY"
+        
+        guard let apiKey = Bundle.main.infoDictionary?[key] as? String else  {
+            fatalError("Api key is not set")
+        }
+        
+        GMSServices.provideAPIKey(apiKey)
     }
     
     private func configureWindow() {

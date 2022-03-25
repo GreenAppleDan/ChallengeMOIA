@@ -1,16 +1,24 @@
 PODS:
+  - GoogleMaps (6.1.1):
+    - GoogleMaps/Maps (= 6.1.1)
+  - GoogleMaps/Base (6.1.1)
+  - GoogleMaps/Maps (6.1.1):
+    - GoogleMaps/Base
   - Swinject (2.8.1)
 
 DEPENDENCIES:
+  - GoogleMaps (= 6.1.1)
   - Swinject (~> 2.8.1)
 
 SPEC REPOS:
   trunk:
+    - GoogleMaps
     - Swinject
 
 SPEC CHECKSUMS:
+  GoogleMaps: 94e6e0851beece6678af9f508f4918b7a7c61722
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 3589a990873b90d438ee4ceef1545df7590dcccb
+PODFILE CHECKSUM: 464e38d25afb57c49f87a9f40f2d239fb9debc5b
 
 COCOAPODS: 1.11.3

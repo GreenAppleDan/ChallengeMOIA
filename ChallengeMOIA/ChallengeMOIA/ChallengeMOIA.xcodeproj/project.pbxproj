@@ -59,6 +59,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9294840427EE1A5E00B3DD9F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		92A6D7EF27ECDEDD00EB5476 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +87,7 @@
 		92A6D7FA27ECDEDD00EB5476 /* ChallengeMOIA */ = {
 			isa = PBXGroup;
 			children = (
+				9294840427EE1A5E00B3DD9F /* Services */,
 				92A6D81D27ECF04C00EB5476 /* DI */,
 				92A6D80F27ECEAF700EB5476 /* Scenes */,
 				92A6D7FB27ECDEDD00EB5476 /* AppDelegate.swift */,
@@ -139,6 +147,7 @@
 				92A6D7F527ECDEDD00EB5476 /* Frameworks */,
 				92A6D7F627ECDEDD00EB5476 /* Resources */,
 				804BBFAFA431D9B002CDDBFB /* [CP] Embed Pods Frameworks */,
+				620B9B22231F4DAB56F85C9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +224,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		620B9B22231F4DAB56F85C9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeMOIA/Pods-ChallengeMOIA-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChallengeMOIA/Pods-ChallengeMOIA-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChallengeMOIA/Pods-ChallengeMOIA-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		804BBFAFA431D9B002CDDBFB /* [CP] Embed Pods Frameworks */ = {
