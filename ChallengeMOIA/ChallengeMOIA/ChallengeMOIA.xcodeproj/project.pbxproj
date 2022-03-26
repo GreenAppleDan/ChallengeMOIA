@@ -22,7 +22,6 @@
 		9294841D27EE43EA00B3DD9F /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841C27EE43EA00B3DD9F /* BaseEndpoint.swift */; };
 		9294842027EE441300B3DD9F /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841F27EE441300B3DD9F /* Decoder.swift */; };
 		9294842427EE474E00B3DD9F /* BaseUrlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294842327EE474E00B3DD9F /* BaseUrlType.swift */; };
-		9294842927EE4A3B00B3DD9F /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294842827EE4A3B00B3DD9F /* BaseError.swift */; };
 		9294842B27EE50D400B3DD9F /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294842A27EE50D400B3DD9F /* ApiClient.swift */; };
 		9294842D27EE536900B3DD9F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294842C27EE536900B3DD9F /* ApiService.swift */; };
 		9294843327EE6CFF00B3DD9F /* ReverseGeocodingEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294843227EE6CFF00B3DD9F /* ReverseGeocodingEndpoint.swift */; };
@@ -56,7 +55,6 @@
 		9294841C27EE43EA00B3DD9F /* BaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpoint.swift; sourceTree = "<group>"; };
 		9294841F27EE441300B3DD9F /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		9294842327EE474E00B3DD9F /* BaseUrlType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUrlType.swift; sourceTree = "<group>"; };
-		9294842827EE4A3B00B3DD9F /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		9294842A27EE50D400B3DD9F /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		9294842C27EE536900B3DD9F /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		9294843227EE6CFF00B3DD9F /* ReverseGeocodingEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingEndpoint.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 				920746AB27EF76D200B5EBF6 /* Helper */,
 				920746A827EF764000B5EBF6 /* Model */,
 				920746A127EF61F500B5EBF6 /* Extensions */,
-				9294842727EE49A400B3DD9F /* Error */,
 				9294841E27EE440A00B3DD9F /* Utility */,
 				9294841827EE437200B3DD9F /* Endpoints */,
 				9294842A27EE50D400B3DD9F /* ApiClient.swift */,
@@ -203,14 +200,6 @@
 				9294842327EE474E00B3DD9F /* BaseUrlType.swift */,
 			);
 			path = UrlType;
-			sourceTree = "<group>";
-		};
-		9294842727EE49A400B3DD9F /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				9294842827EE4A3B00B3DD9F /* BaseError.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 		92A6D7EF27ECDEDD00EB5476 = {
@@ -442,7 +431,6 @@
 				920746B427EF7F5E00B5EBF6 /* Resolver+Fatal.swift in Sources */,
 				9294842027EE441300B3DD9F /* Decoder.swift in Sources */,
 				920746A327EF61FF00B5EBF6 /* URL+Query.swift in Sources */,
-				9294842927EE4A3B00B3DD9F /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
