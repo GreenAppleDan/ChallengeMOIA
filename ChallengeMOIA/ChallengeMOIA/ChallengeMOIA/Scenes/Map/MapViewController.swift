@@ -8,7 +8,9 @@
 import UIKit
 import GoogleMaps
 
-protocol MapDisplayLogic: AnyObject { }
+protocol MapDisplayLogic: AnyObject {
+    func displayReverseGeocode(viewModel: FetchReverseGeocode.ViewModel)
+}
 
 final class MapViewController: UIViewController, MapDisplayLogic {
     
@@ -33,6 +35,11 @@ final class MapViewController: UIViewController, MapDisplayLogic {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         mapView.frame.size = size
+    }
+    
+    // MARK: MapDisplayLogic
+    func displayReverseGeocode(viewModel: FetchReverseGeocode.ViewModel) {
+        
     }
     
     // MARK: Private

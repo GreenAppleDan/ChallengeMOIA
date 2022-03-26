@@ -5,17 +5,19 @@
 //  Created by Denis on 24.03.2022.
 //
 
-enum Map {
-    
-  enum Location {
-      
+enum FetchReverseGeocode {
     struct Request {
+        let latitude: Double
+        let longitude: Double
     }
-      
-    struct Response {
+    
+    enum Response {
+        case success(response: ReverseGeocodingResponse)
+        case failure(error: Error)
     }
-      
-    struct ViewModel {
+    
+    enum ViewModel {
+        case success(title: String, subtitle: String)
+        case failure(errorText: String)
     }
-  }
 }
