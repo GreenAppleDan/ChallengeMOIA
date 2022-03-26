@@ -10,5 +10,12 @@ protocol MapBusinessLogic { }
 protocol MapDataStore { }
 
 final class MapInteractor: MapBusinessLogic, MapDataStore {
-  var presenter: MapPresentationLogic?
+    private let presenter: MapPresentationLogic
+    private let geocodingService: GeocodingService
+    
+    init(presenter: MapPresentationLogic,
+         geocodingService: GeocodingService) {
+        self.presenter = presenter
+        self.geocodingService = geocodingService
+    }
 }

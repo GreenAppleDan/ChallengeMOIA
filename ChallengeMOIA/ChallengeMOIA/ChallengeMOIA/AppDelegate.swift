@@ -24,13 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setGoogleMapsApiKey() {
-        let key = "API_KEY"
-        
-        guard let apiKey = Bundle.main.infoDictionary?[key] as? String else  {
-            fatalError("Api key is not set")
-        }
-        
-        GMSServices.provideAPIKey(apiKey)
+        GMSServices.provideAPIKey(ApiKeyStorage.googleMapsApiKey)
     }
     
     private func configureWindow() {

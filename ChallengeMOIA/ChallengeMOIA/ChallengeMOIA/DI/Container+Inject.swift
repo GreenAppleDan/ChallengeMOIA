@@ -10,5 +10,6 @@ import Swinject
 extension Container {
     func registerDependency() {
         mapDependencyInjectionContainer()
+        serviceDependencyInjectionContainer()
     }
 }

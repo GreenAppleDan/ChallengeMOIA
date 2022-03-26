@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920746A327EF61FF00B5EBF6 /* URL+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746A227EF61FF00B5EBF6 /* URL+Query.swift */; };
+		920746A527EF625300B5EBF6 /* ApiKeyStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746A427EF625300B5EBF6 /* ApiKeyStorage.swift */; };
+		920746A727EF6C9200B5EBF6 /* URLRequest+HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746A627EF6C9200B5EBF6 /* URLRequest+HTTP.swift */; };
+		920746AA27EF765D00B5EBF6 /* ReverseGeocodingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746A927EF765D00B5EBF6 /* ReverseGeocodingResponse.swift */; };
+		920746AD27EF76DB00B5EBF6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746AC27EF76DB00B5EBF6 /* Result.swift */; };
+		920746AF27EF770A00B5EBF6 /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746AE27EF770A00B5EBF6 /* GeocodingService.swift */; };
+		920746B127EF7BC600B5EBF6 /* Services+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746B027EF7BC600B5EBF6 /* Services+Inject.swift */; };
+		920746B427EF7F5E00B5EBF6 /* Resolver+Fatal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746B327EF7F5E00B5EBF6 /* Resolver+Fatal.swift */; };
 		9294841127EE213400B3DD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9294841027EE213400B3DD9F /* Assets.xcassets */; };
 		9294841427EE219100B3DD9F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841327EE219100B3DD9F /* Color.swift */; };
 		9294841627EE2E1500B3DD9F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841527EE2E1500B3DD9F /* Image.swift */; };
@@ -33,6 +41,14 @@
 /* Begin PBXFileReference section */
 		0DD1F2A554E09CFB5784939E /* Pods-ChallengeMOIA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChallengeMOIA.debug.xcconfig"; path = "Target Support Files/Pods-ChallengeMOIA/Pods-ChallengeMOIA.debug.xcconfig"; sourceTree = "<group>"; };
 		340404D6B894E30DF92B875E /* Pods_ChallengeMOIA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChallengeMOIA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		920746A227EF61FF00B5EBF6 /* URL+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Query.swift"; sourceTree = "<group>"; };
+		920746A427EF625300B5EBF6 /* ApiKeyStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeyStorage.swift; sourceTree = "<group>"; };
+		920746A627EF6C9200B5EBF6 /* URLRequest+HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+HTTP.swift"; sourceTree = "<group>"; };
+		920746A927EF765D00B5EBF6 /* ReverseGeocodingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingResponse.swift; sourceTree = "<group>"; };
+		920746AC27EF76DB00B5EBF6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		920746AE27EF770A00B5EBF6 /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
+		920746B027EF7BC600B5EBF6 /* Services+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Inject.swift"; sourceTree = "<group>"; };
+		920746B327EF7F5E00B5EBF6 /* Resolver+Fatal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Fatal.swift"; sourceTree = "<group>"; };
 		9294841027EE213400B3DD9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9294841327EE219100B3DD9F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9294841527EE2E1500B3DD9F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -79,9 +95,45 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		920746A127EF61F500B5EBF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				920746A227EF61FF00B5EBF6 /* URL+Query.swift */,
+				920746A627EF6C9200B5EBF6 /* URLRequest+HTTP.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		920746A827EF764000B5EBF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				920746A927EF765D00B5EBF6 /* ReverseGeocodingResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		920746AB27EF76D200B5EBF6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				920746AC27EF76DB00B5EBF6 /* Result.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		920746B227EF7F4200B5EBF6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				920746B327EF7F5E00B5EBF6 /* Resolver+Fatal.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9294840427EE1A5E00B3DD9F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				920746A427EF625300B5EBF6 /* ApiKeyStorage.swift */,
+				920746AE27EF770A00B5EBF6 /* GeocodingService.swift */,
+				920746B027EF7BC600B5EBF6 /* Services+Inject.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -106,6 +158,9 @@
 		9294841727EE3D3900B3DD9F /* API */ = {
 			isa = PBXGroup;
 			children = (
+				920746AB27EF76D200B5EBF6 /* Helper */,
+				920746A827EF764000B5EBF6 /* Model */,
+				920746A127EF61F500B5EBF6 /* Extensions */,
 				9294842727EE49A400B3DD9F /* Error */,
 				9294841E27EE440A00B3DD9F /* Utility */,
 				9294841827EE437200B3DD9F /* Endpoints */,
@@ -216,6 +271,7 @@
 		92A6D81D27ECF04C00EB5476 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				920746B227EF7F4200B5EBF6 /* Extension */,
 				92A6D81E27ECF07400EB5476 /* Container+Inject.swift */,
 			);
 			path = DI;
@@ -363,21 +419,29 @@
 			files = (
 				92A6D82127ECF0BF00EB5476 /* Map+Inject.swift in Sources */,
 				9294841D27EE43EA00B3DD9F /* BaseEndpoint.swift in Sources */,
+				920746B127EF7BC600B5EBF6 /* Services+Inject.swift in Sources */,
 				92A6D7FC27ECDEDD00EB5476 /* AppDelegate.swift in Sources */,
 				9294843327EE6CFF00B3DD9F /* ReverseGeocodingEndpoint.swift in Sources */,
 				92A6D81A27ECEC3700EB5476 /* MapViewController.swift in Sources */,
 				9294842B27EE50D400B3DD9F /* ApiClient.swift in Sources */,
+				920746A527EF625300B5EBF6 /* ApiKeyStorage.swift in Sources */,
 				9294841427EE219100B3DD9F /* Color.swift in Sources */,
+				920746AA27EF765D00B5EBF6 /* ReverseGeocodingResponse.swift in Sources */,
 				92A6D81827ECEC3700EB5476 /* MapRouter.swift in Sources */,
 				92A6D81627ECEC3700EB5476 /* MapPresenter.swift in Sources */,
 				92A6D81F27ECF07400EB5476 /* Container+Inject.swift in Sources */,
 				9294842427EE474E00B3DD9F /* BaseUrlType.swift in Sources */,
+				920746AD27EF76DB00B5EBF6 /* Result.swift in Sources */,
 				92A6D81927ECEC3700EB5476 /* MapModels.swift in Sources */,
 				92A6D81B27ECEC3700EB5476 /* MapInteractor.swift in Sources */,
 				9294841B27EE43C000B3DD9F /* Endpoint.swift in Sources */,
+				920746AF27EF770A00B5EBF6 /* GeocodingService.swift in Sources */,
 				9294842D27EE536900B3DD9F /* ApiService.swift in Sources */,
+				920746A727EF6C9200B5EBF6 /* URLRequest+HTTP.swift in Sources */,
 				9294841627EE2E1500B3DD9F /* Image.swift in Sources */,
+				920746B427EF7F5E00B5EBF6 /* Resolver+Fatal.swift in Sources */,
 				9294842027EE441300B3DD9F /* Decoder.swift in Sources */,
+				920746A327EF61FF00B5EBF6 /* URL+Query.swift in Sources */,
 				9294842927EE4A3B00B3DD9F /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

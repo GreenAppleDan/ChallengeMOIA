@@ -11,21 +11,28 @@ extension Container {
     func mapDependencyInjectionContainer() {
         
         register(MapInteractor.self) { resolver in
-            let interactor = MapInteractor()
-            interactor.presenter = resolver.resolve(MapPresenter.self)
+            
+            let presenter = resolver.resolveOrFatal(MapPresenter.self)
+            let geocodingService = resolver.resolveOrFatal(GeocodingService.self)
+            let interactor = MapInteractor(
+                presenter: presenter,
+                geocodingService: geocodingService)
             return interactor
         }
         
         register(MapPresenter.self) { resolver in
-            let presenter = MapPresenter()
-            presenter.viewController = resolver.resolve(MapViewController.self)
+            let viewController = resolver.resolveOrFatal(MapViewController.self)
+            let presenter = MapPresenter(viewController: viewController)
             return presenter
         }
         
         register(MapRouter.self) { resolver in
-            let router = MapRouter()
-            router.viewController = resolver.resolve(MapViewController.self)
-            router.dataStore = resolver.resolve(MapInteractor.self)
+            let viewController = resolver.resolveOrFatal(MapViewController.self)
+            let dataStore = resolver.resolveOrFatal(MapInteractor.self)
+            let router = MapRouter(
+                viewController: viewController,
+                dataStore: dataStore)
+            
             return router
         }
         

@@ -8,5 +8,9 @@
 protocol MapPresentationLogic { }
 
 final class MapPresenter: MapPresentationLogic {
-    weak var viewController: MapDisplayLogic?
+    private weak var viewController: MapDisplayLogic?
+    
+    init(viewController: MapDisplayLogic) {
+        self.viewController = viewController
+    }
 }
