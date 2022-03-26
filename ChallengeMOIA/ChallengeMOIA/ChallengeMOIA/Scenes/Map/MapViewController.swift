@@ -71,5 +71,6 @@ final class MapViewController: UIViewController, MapDisplayLogic {
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
         addNewMarker(at: coordinate)
+        interactor?.fetchReverseGeocode(request: .init(latitude: coordinate.latitude, longitude: coordinate.longitude))
     }
 }

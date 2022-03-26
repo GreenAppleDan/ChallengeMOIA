@@ -11,9 +11,17 @@ enum FetchReverseGeocode {
         let longitude: Double
     }
     
+    struct ResponseData {
+        let city: String?
+        let street: String?
+        let streetNumber: String?
+        let country: String?
+        let postalCode: String?
+    }
+    
     enum Response {
-        case success(response: ReverseGeocodingResponse)
-        case failure(error: Error)
+        case success(response: ResponseData)
+        case failure(errorText: String)
     }
     
     enum ViewModel {
