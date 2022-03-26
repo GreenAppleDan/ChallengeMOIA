@@ -40,8 +40,8 @@ extension Container {
             let viewController = MapViewController()
             return viewController
         }.initCompleted { resolver, viewController in
-            viewController.interactor = resolver.resolve(MapInteractor.self)
-            viewController.router = resolver.resolve(MapRouter.self)
+            viewController.interactor = resolver.resolveOrFatal(MapInteractor.self)
+            viewController.router = resolver.resolveOrFatal(MapRouter.self)
         }
     }
 }
