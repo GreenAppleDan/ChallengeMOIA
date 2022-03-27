@@ -54,10 +54,15 @@ final class MapViewController: UIViewController {
         mapView.frame.size = size
     }
 
-    
     // MARK: Private
     private func configureView() {
         view.backgroundColor = .background
+    }
+    
+    private func showError(errorText: String) {
+        let alert = UIAlertController(title: "Error", message: errorText, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -69,6 +74,8 @@ extension MapViewController: MapDisplayLogic {
             locationDescriptionView.update(titleText: title, subtitleText: subtitle)
             locationDescriptionView.stopLoading()
         case .failure(let errorText):
+            showError(errorText: errorText)
+            removeCurrentMarker()
             changeLocationDescriptionVisibilityAnimated(isHidden: true) { [weak self] in
                 self?.locationDescriptionView.stopLoading()
             }
