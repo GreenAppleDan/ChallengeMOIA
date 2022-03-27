@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImage {
-    static let closeIconHighlighted = #imageLiteral(resourceName: "closeIconHighlighted")
-    static let closeIconNormal = #imageLiteral(resourceName: "closeIconNormal")
-    static let mapLocationMarker = #imageLiteral(resourceName: "mapLocationMarker")
+    static let closeIconHighlighted = #imageLiteral(resourceName: "CloseIconHighlighted")
+    static let closeIconNormal = #imageLiteral(resourceName: "CloseIconNormal")
+    static let mapLocationMarker = #imageLiteral(resourceName: "MapLocationMarker")
 }
