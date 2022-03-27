@@ -12,11 +12,12 @@ protocol MapDisplayLogic: AnyObject {
     func displayReverseGeocode(viewModel: FetchReverseGeocode.ViewModel)
 }
 
-final class MapViewController: UIViewController, MapDisplayLogic {
+final class MapViewController: UIViewController {
     
     var interactor: MapBusinessLogic?
     var router: (MapRoutingLogic & MapDataPassing)?
     
+    // MARK: GMSMapView
     private lazy var mapView: GMSMapView = {
         let camera = GMSCameraPosition.camera(withLatitude: 53.5499242, longitude: 9.9839786, zoom: 15.0)
         return GMSMapView(frame: view.bounds, camera: camera)
@@ -42,7 +43,6 @@ final class MapViewController: UIViewController, MapDisplayLogic {
     private var descriptionViewBottomToRootViewBottomConstraint: NSLayoutConstraint?
     
     // MARK: View lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
@@ -53,8 +53,16 @@ final class MapViewController: UIViewController, MapDisplayLogic {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         mapView.frame.size = size
     }
+
     
-    // MARK: MapDisplayLogic
+    // MARK: Private
+    private func configureView() {
+        view.backgroundColor = .background
+    }
+}
+
+// MARK: MapDisplayLogic
+extension MapViewController: MapDisplayLogic {
     func displayReverseGeocode(viewModel: FetchReverseGeocode.ViewModel) {
         switch viewModel {
         case .success(let title, let subtitle):
@@ -66,12 +74,10 @@ final class MapViewController: UIViewController, MapDisplayLogic {
             }
         }
     }
-    
-    // MARK: Private
-    private func configureView() {
-        view.backgroundColor = .background
-    }
-    
+}
+
+// MARK: GMSMapView Related
+extension MapViewController {
     private func configureMap() {
         mapView.delegate = self
         view.addSubview(mapView)
@@ -90,7 +96,23 @@ final class MapViewController: UIViewController, MapDisplayLogic {
     private func removeCurrentMarker() {
         currentMarker?.map = nil
     }
-    
+}
+
+// MARK: GMSMapViewDelegate
+extension MapViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        addNewMarker(at: coordinate)
+        
+        // Showing location description view with animation and show loading indicator
+        locationDescriptionView.startLoading()
+        changeLocationDescriptionVisibilityAnimated(isHidden: false)
+        
+        interactor?.fetchReverseGeocode(request: .init(latitude: coordinate.latitude, longitude: coordinate.longitude))
+    }
+}
+
+// MARK: LocationDescriptionView Related
+extension MapViewController {
     private func addLocationDescriptionView() {
         locationDescriptionView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -144,19 +166,5 @@ final class MapViewController: UIViewController, MapDisplayLogic {
         UIView.animate(withDuration: 0.3,
                        animations: animations,
                        completion: completion)
-        
-    }
-    
-}
-
-extension MapViewController: GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        addNewMarker(at: coordinate)
-        
-        // Showing location description view with animation and show loading indicator
-        locationDescriptionView.startLoading()
-        changeLocationDescriptionVisibilityAnimated(isHidden: false)
-        
-        interactor?.fetchReverseGeocode(request: .init(latitude: coordinate.latitude, longitude: coordinate.longitude))
     }
 }
