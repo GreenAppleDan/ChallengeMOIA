@@ -15,6 +15,9 @@
 		920746AF27EF770A00B5EBF6 /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746AE27EF770A00B5EBF6 /* GeocodingService.swift */; };
 		920746B127EF7BC600B5EBF6 /* Services+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746B027EF7BC600B5EBF6 /* Services+Inject.swift */; };
 		920746B427EF7F5E00B5EBF6 /* Resolver+Fatal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746B327EF7F5E00B5EBF6 /* Resolver+Fatal.swift */; };
+		927443BB27F05E6C00BF5FAD /* LocationDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927443BA27F05E6C00BF5FAD /* LocationDescriptionView.swift */; };
+		927443C027F06B6000BF5FAD /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927443BF27F06B6000BF5FAD /* LoadableView.swift */; };
+		927443C327F0800600BF5FAD /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927443C227F0800600BF5FAD /* UIView+Constraints.swift */; };
 		9294841127EE213400B3DD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9294841027EE213400B3DD9F /* Assets.xcassets */; };
 		9294841427EE219100B3DD9F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841327EE219100B3DD9F /* Color.swift */; };
 		9294841627EE2E1500B3DD9F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9294841527EE2E1500B3DD9F /* Image.swift */; };
@@ -48,6 +51,9 @@
 		920746AE27EF770A00B5EBF6 /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
 		920746B027EF7BC600B5EBF6 /* Services+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Inject.swift"; sourceTree = "<group>"; };
 		920746B327EF7F5E00B5EBF6 /* Resolver+Fatal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Fatal.swift"; sourceTree = "<group>"; };
+		927443BA27F05E6C00BF5FAD /* LocationDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDescriptionView.swift; sourceTree = "<group>"; };
+		927443BF27F06B6000BF5FAD /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		927443C227F0800600BF5FAD /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		9294841027EE213400B3DD9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9294841327EE219100B3DD9F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9294841527EE2E1500B3DD9F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -126,6 +132,30 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		927443B927F05E4900BF5FAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				927443BA27F05E6C00BF5FAD /* LocationDescriptionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		927443BE27F06AEA00BF5FAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				927443BF27F06B6000BF5FAD /* LoadableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		927443C127F07FF700BF5FAD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				927443C227F0800600BF5FAD /* UIView+Constraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9294840427EE1A5E00B3DD9F /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +169,8 @@
 		9294840B27EE1DF200B3DD9F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				927443C127F07FF700BF5FAD /* Extensions */,
+				927443BE27F06AEA00BF5FAD /* View */,
 				9294841227EE218400B3DD9F /* Utility */,
 			);
 			path = Common;
@@ -247,6 +279,7 @@
 		92A6D81C27ECEC3C00EB5476 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				927443B927F05E4900BF5FAD /* Views */,
 				92A6D81027ECEC3700EB5476 /* MapPresenter.swift */,
 				92A6D81227ECEC3700EB5476 /* MapRouter.swift */,
 				92A6D81327ECEC3700EB5476 /* MapModels.swift */,
@@ -409,6 +442,7 @@
 				92A6D82127ECF0BF00EB5476 /* Map+Inject.swift in Sources */,
 				9294841D27EE43EA00B3DD9F /* BaseEndpoint.swift in Sources */,
 				920746B127EF7BC600B5EBF6 /* Services+Inject.swift in Sources */,
+				927443C327F0800600BF5FAD /* UIView+Constraints.swift in Sources */,
 				92A6D7FC27ECDEDD00EB5476 /* AppDelegate.swift in Sources */,
 				9294843327EE6CFF00B3DD9F /* ReverseGeocodingEndpoint.swift in Sources */,
 				92A6D81A27ECEC3700EB5476 /* MapViewController.swift in Sources */,
@@ -418,8 +452,10 @@
 				920746AA27EF765D00B5EBF6 /* ReverseGeocodingResponse.swift in Sources */,
 				92A6D81827ECEC3700EB5476 /* MapRouter.swift in Sources */,
 				92A6D81627ECEC3700EB5476 /* MapPresenter.swift in Sources */,
+				927443BB27F05E6C00BF5FAD /* LocationDescriptionView.swift in Sources */,
 				92A6D81F27ECF07400EB5476 /* Container+Inject.swift in Sources */,
 				9294842427EE474E00B3DD9F /* BaseUrlType.swift in Sources */,
+				927443C027F06B6000BF5FAD /* LoadableView.swift in Sources */,
 				920746AD27EF76DB00B5EBF6 /* Result.swift in Sources */,
 				92A6D81927ECEC3700EB5476 /* MapModels.swift in Sources */,
 				92A6D81B27ECEC3700EB5476 /* MapInteractor.swift in Sources */,

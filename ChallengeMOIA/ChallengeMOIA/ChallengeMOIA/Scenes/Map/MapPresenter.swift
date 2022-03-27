@@ -18,5 +18,30 @@ final class MapPresenter: MapPresentationLogic {
     }
     
     func presentReverseGeocode(response: FetchReverseGeocode.Response) {
+        
+        switch response {
+        case .success(let responseData):
+            let viewModel = reverseGeocodeViewModelFromResponseData(responseData: responseData)
+            viewController?.displayReverseGeocode(viewModel: viewModel)
+        case .failure(let errorText):
+            viewController?.displayReverseGeocode(viewModel: .failure(errorText: errorText))
+        }
+    }
+    
+    private func reverseGeocodeViewModelFromResponseData(responseData: FetchReverseGeocode.ResponseData) -> FetchReverseGeocode.ViewModel {
+        
+        let title = [responseData.street, responseData.streetNumber].compactMap{ $0 }.joined(separator: " ")
+        
+        let cityString: String
+        
+        if let city = responseData.city {
+            cityString = city + ","
+        } else {
+            cityString = ""
+        }
+        
+        let subtitle = [responseData.postalCode, cityString, responseData.country].compactMap{ $0 }.joined(separator: " ")
+        
+        return .success(title: title, subtitle: subtitle)
     }
 }

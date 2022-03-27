@@ -9,6 +9,7 @@ import Foundation
 
 protocol MapBusinessLogic {
     func fetchReverseGeocode(request: FetchReverseGeocode.Request)
+    func cancelCurrentReverseGeocodingRequest()
 }
 
 protocol MapDataStore { }
@@ -28,7 +29,7 @@ final class MapInteractor: MapBusinessLogic, MapDataStore {
     
     func fetchReverseGeocode(request: FetchReverseGeocode.Request) {
         // canceling previous request if still running
-        currentReverseGeocodeProgress?.cancel()
+        cancelCurrentReverseGeocodingRequest()
         
         currentReverseGeocodeProgress = geocodingService.reverseGeocode(
             latitude: request.latitude,
@@ -41,6 +42,10 @@ final class MapInteractor: MapBusinessLogic, MapDataStore {
                     self?.presenter.presentReverseGeocode(response: response)
                 }
             }
+    }
+    
+    func cancelCurrentReverseGeocodingRequest() {
+        currentReverseGeocodeProgress?.cancel()
     }
     
     // MARK: Private
