@@ -29,6 +29,9 @@ struct ReverseGeocodingEndpoint: BaseEndpoint {
         let key = ApiKeyStorage.googleMapsApiKey
         queryItems.append(.init(name: "key", value: key))
         
+        // hardcoded English language
+        queryItems.append(.init(name: "language", value: "en"))
+        
         // hardcoded filters
         let streetAddress = "street_address"
         let country = "country"

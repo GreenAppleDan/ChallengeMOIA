@@ -42,6 +42,10 @@ final class MapPresenter: MapPresentationLogic {
         
         let subtitle = [responseData.postalCode, cityString, responseData.country].compactMap{ $0 }.joined(separator: " ")
         
+        if title.isEmpty {
+            return .success(title: subtitle, subtitle: "")
+        }
+        
         return .success(title: title, subtitle: subtitle)
     }
 }
