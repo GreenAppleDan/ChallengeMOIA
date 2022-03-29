@@ -15,6 +15,7 @@
 		920746AF27EF770A00B5EBF6 /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746AE27EF770A00B5EBF6 /* GeocodingService.swift */; };
 		920746B127EF7BC600B5EBF6 /* Services+Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746B027EF7BC600B5EBF6 /* Services+Inject.swift */; };
 		920746B427EF7F5E00B5EBF6 /* Resolver+Fatal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920746B327EF7F5E00B5EBF6 /* Resolver+Fatal.swift */; };
+		922A64A527F357A0005CFC77 /* Error+Cancelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A64A427F357A0005CFC77 /* Error+Cancelation.swift */; };
 		927443BB27F05E6C00BF5FAD /* LocationDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927443BA27F05E6C00BF5FAD /* LocationDescriptionView.swift */; };
 		927443C027F06B6000BF5FAD /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927443BF27F06B6000BF5FAD /* LoadableView.swift */; };
 		927443C327F0800600BF5FAD /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927443C227F0800600BF5FAD /* UIView+Constraints.swift */; };
@@ -51,6 +52,7 @@
 		920746AE27EF770A00B5EBF6 /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
 		920746B027EF7BC600B5EBF6 /* Services+Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Inject.swift"; sourceTree = "<group>"; };
 		920746B327EF7F5E00B5EBF6 /* Resolver+Fatal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+Fatal.swift"; sourceTree = "<group>"; };
+		922A64A427F357A0005CFC77 /* Error+Cancelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Cancelation.swift"; sourceTree = "<group>"; };
 		927443BA27F05E6C00BF5FAD /* LocationDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDescriptionView.swift; sourceTree = "<group>"; };
 		927443BF27F06B6000BF5FAD /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 		927443C227F0800600BF5FAD /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				927443C227F0800600BF5FAD /* UIView+Constraints.swift */,
+				922A64A427F357A0005CFC77 /* Error+Cancelation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				9294841B27EE43C000B3DD9F /* Endpoint.swift in Sources */,
 				920746AF27EF770A00B5EBF6 /* GeocodingService.swift in Sources */,
 				9294842D27EE536900B3DD9F /* ApiService.swift in Sources */,
+				922A64A527F357A0005CFC77 /* Error+Cancelation.swift in Sources */,
 				920746A727EF6C9200B5EBF6 /* URLRequest+HTTP.swift in Sources */,
 				9294841627EE2E1500B3DD9F /* Image.swift in Sources */,
 				920746B427EF7F5E00B5EBF6 /* Resolver+Fatal.swift in Sources */,

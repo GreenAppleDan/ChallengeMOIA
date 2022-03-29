@@ -37,7 +37,8 @@ final class MapInteractor: MapBusinessLogic, MapDataStore {
                 switch result {
                 case .success(let geocodingResponse):
                     self?.processReverseGeocodeSuccess(response: geocodingResponse)
-                case .failure:
+                case .failure(let error):
+                    guard !error.isCanceled else { return }
                     let response = FetchReverseGeocode.Response.failure(errorText: "Error. Please try again later")
                     self?.presenter.presentReverseGeocode(response: response)
                 }
