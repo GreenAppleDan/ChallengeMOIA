@@ -18,6 +18,7 @@ struct GeocodingAddressesContainer: Decodable {
 
 struct GeocodingAddressComponent: Decodable {
     let longName: String
+    // Types is string instead of enum. This is done this way cas otherwise it would be overhead since I would have to cover every single case (and I need only 5)
     let types: [String]
 }
 

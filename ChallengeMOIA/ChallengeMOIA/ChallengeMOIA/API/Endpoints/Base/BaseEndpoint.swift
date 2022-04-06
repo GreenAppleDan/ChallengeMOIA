@@ -26,7 +26,7 @@ extension BaseEndpoint {
 
     // MARK: - Endpoint
 
-    public func content(from response: URLResponse?, with body: Data) throws -> Content {
+    func content(from response: URLResponse?, with body: Data) throws -> Content {
         let resource = try JSONDecoder.default.decode(Root.self, from: body)
         return content(from: resource)
     }

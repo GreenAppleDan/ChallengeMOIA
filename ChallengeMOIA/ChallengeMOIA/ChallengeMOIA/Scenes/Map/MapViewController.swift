@@ -129,7 +129,7 @@ extension MapViewController {
         let locationDescriptionViewSidePadding: CGFloat = 20
         
         // Width is never changing and equals to the width of root view minus side padding (in portrait orientation)
-        let locationDescriptionViewWidth = view.frame.width - 2 * locationDescriptionViewSidePadding
+        let locationDescriptionViewWidth = min(view.frame.width, view.frame.height) - 2 * locationDescriptionViewSidePadding
         
         // This constraint is active when locationDescriptionView is hidden, and inactive when locationDescriptionView is visible. Active by default
         let descriptionViewTopToRootViewBottomConstraint = locationDescriptionView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: locationDescriptionViewSidePadding)
